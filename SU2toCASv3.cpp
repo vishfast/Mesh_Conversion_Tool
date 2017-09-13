@@ -264,7 +264,7 @@ int main(int argc, char **argv){
         place(i+1, elements[i][1], elements[i][2], elements[i][3], elements[i][0], points, faces, outfile);
 
         /////////////////////////////////////////////////////////////////////
-        cout<<i<<"/"<<nelem<<" cells mapped"<<'\r';
+        cout<<i+1<<"/"<<nelem<<" cells mapped"<<'\r';
         cout.flush();
     
     }
