@@ -3,7 +3,6 @@
 Description:
 
 > Converts a 3D tetrahedral SU2 mesh (or a Gmsh format converted to SU2) to a CAS format for use with Fluent/JOE
-> Steps
   - Take the SU2 file and remove any sections that do not belong to the following:
     1. NDIME
     2. NELEM
