@@ -12,4 +12,5 @@ Description:
     6. MARKER_ELEMS
   - Remove any marker surface that do not constitute the boundary
   - Run on the terminal: <executable/file/after/compilation> <SU2/input/file/name> <CAS/output/file/name>
+  - Edit the boundary conditions in the cas file
 > Rate of mesh conversion on a standard Intel Xeon: ~100,000 cells/second
