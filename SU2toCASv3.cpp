@@ -95,7 +95,7 @@ int check_lr(int nd1, int nd2, int nd3, int nd4, double** point){
 
     double result = (x4-x1)*((y2-y1)*(z3-z2)-(z2-z1)*(y3-y2)) + (y4-y1)*((z2-z1)*(x3-x2)-(x2-x1)*(z3-z2)) + (z4-z1)*((x2-x1)*(y3-y2)-(y2-y1)*(x3-x2));
 
-    if(result>1e-15) return 0; else return 1;
+    if(result>0.0) return 0; else return 1;
 
 }
 
