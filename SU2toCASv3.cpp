@@ -77,25 +77,25 @@ int check_lr(int nd1, int nd2, int nd3, int nd4, double** point){
     double xm, ym, zm;
     double x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4;
     
-    x1 = point[nd1][0];
-    y1 = point[nd1][1];
-    z1 = point[nd1][2];
+    x1 = point[nd1][0]*1000;
+    y1 = point[nd1][1]*1000;
+    z1 = point[nd1][2]*1000;
 
-    x2 = point[nd2][0];
-    y2 = point[nd2][1];
-    z2 = point[nd2][2];
+    x2 = point[nd2][0]*1000;
+    y2 = point[nd2][1]*1000;
+    z2 = point[nd2][2]*1000;
 
-    x3 = point[nd3][0];
-    y3 = point[nd3][1];
-    z3 = point[nd3][2];
+    x3 = point[nd3][0]*1000;
+    y3 = point[nd3][1]*1000;
+    z3 = point[nd3][2]*1000;
 
-    x4 = point[nd4][0];
-    y4 = point[nd4][1];
-    z4 = point[nd4][2];
+    x4 = point[nd4][0]*1000;
+    y4 = point[nd4][1]*1000;
+    z4 = point[nd4][2]*1000;
 
     double result = (x4-x1)*((y2-y1)*(z3-z2)-(z2-z1)*(y3-y2)) + (y4-y1)*((z2-z1)*(x3-x2)-(x2-x1)*(z3-z2)) + (z4-z1)*((x2-x1)*(y3-y2)-(y2-y1)*(x3-x2));
 
-    if(result>0.0) return 0; else return 1;
+    if(result>1e-15) return 0; else return 1;
 
 }
 
@@ -310,7 +310,7 @@ int main(int argc, char **argv){
 
     for(int i=0; i<npoint; i++){
 
-        outfile<<points[i][0]<<"\t\t"<<points[i][1]<<"\t\t"<<points[i][2]<<'\r'<<endl;
+        outfile<<fixed<<setprecision(15)<<points[i][0]<<"\t\t"<<points[i][1]<<"\t\t"<<points[i][2]<<'\r'<<endl;
 
     }
 
