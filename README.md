@@ -11,6 +11,8 @@ Description:
     5. MARKER_TAG
     6. MARKER_ELEMS
   - Remove any marker surface that do not constitute the boundary
-  - Run on the terminal: <executable/file/after/compilation> <SU2/input/file/name> <CAS/output/file/name>
+  - Run on the terminal using the cpp version (may not be perfect because precision is a b$%&h but fast): <executable/file/after/compilation> <SU2/input/file/name> <CAS/output/file/name>
+    OR
+    Run on terminal using the following command (slow but good): python convSU2.py cas <SU2/input/file/name> <CAS/output/file/name>
   - Edit the boundary conditions in the cas file
 > Rate of mesh conversion on a standard Intel Xeon: ~100,000 cells/second
