@@ -210,7 +210,7 @@ def createCAS(filename, outfile):
     
     for i in range(num[2]):
 
-        f.write("(13 ("+str(i+4)+" "+h(counter+1)+" "+h(counter+len(dat[2][i]))+" 3 3)(\r\n")
+        f.write("(13 ("+h(i+4)+" "+h(counter+1)+" "+h(counter+len(dat[2][i]))+" 3 3)(\r\n")
 
         counter += len(dat[2][i])
 
